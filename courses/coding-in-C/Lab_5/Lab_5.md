@@ -93,7 +93,7 @@ Note: If you place the particles with an odd distance, the will never collide.
    - Move each particle randomly to the left or right by one cell.
    - Ensure particles **do not move out of bounds** but stay at the edge of the field.
    - If multiple particles move into the same cell, remove them (set cell to 0).
-6. Do **not** use structs or additional functions; keep everything in `main`.
+6. Do **not** use structs
 7. Use `<stdlib.h>` and `<time.h>` for random number generation.
 
 ### Example
