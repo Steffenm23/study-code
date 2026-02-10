@@ -1,31 +1,37 @@
 // Calculator 
 #include <stdio.h>
-const char Berechnung;
 int main()
 { 
-    float A, B, Ergebnis = 0;
-}
-printf("Rechner gestartet");
-printf("Rechenopertation auswählen");
-if (scanf "%s" 
+  double zahl1;
+  double zahl2;
+  char operator;
 
-if ( Berechnung == '+')
+printf("Rechner gestartet");
+printf("\nGebe eine Zahl ein: ");
+scanf("%lf", &zahl1);
+printf("\nGebe noch eine Zahl ein: ");
+scanf("%lf", &zahl2);
+printf("Gebe einen Operator ein: ");
+scanf(" %c " , &operator);
+printf("\n\n %lf %lf %c" , zahl1, zahl2, operator);
+if ( operator == '+')
 {
-    Ergebnis = A + B;
+    printf("%lf + %lf = %lf", zahl1, zahl2, zahl1 + zahl2);
 }
-else if ( Berechnung == '-')
+else if ( operator == '-')
 {
-    Ergebnis = A - B ;
+    printf("%lf - %lf = %lf", zahl1, zahl2, zahl1 - zahl2);
 }
-else if ( Berechnung == '*')
+else if ( operator == '*')
 {
-    Ergebnis = A * B ;
+     printf("%lf * %lf = %lf", zahl1, zahl2, zahl1 * zahl2);
 }
-else if ( Berechnung == '/')
+else if ( operator == '/')
 {
-    Ergebnis = A / B ; 
+     printf("%lf + %lf / %lf", zahl1, zahl2, zahl1 / zahl2); 
 }
 else {
     printf("Keine Rechenoperation ausführbar!");
-return 1;
+return 0;
+}
 }
