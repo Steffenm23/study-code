@@ -1,44 +1,28 @@
-# Lab 4: Palindrome Detective
+/*
+ * File: main.c
+ * Description: Palindrome Detective
+ */
 
-## Introduction
-Write a C program that checks if a given word is a palindrome.  
-A palindrome is a word that reads the same forwards and backwards (e.g., "level", "radar").
+ #include <stdio.h>
+ #include <string.h>
 
-## Section I
+ int string_as_input(char string[], char name2[]) 
+ {
+    *(string + 1) = 'c';
+    return 0;
+    
+ }
+ int main() 
+ {
+    char name[] = ("Curly bird catches the worm");
+    char *p_name = &name;
+    printf("\n%s", name);
+    printf("\n%s", p_name );
 
-Write a short program following these steps:
-1. Creates a string with the content: "Curly bird catches the worm".
-2. Create a pointer to this string.
-3. Print out both contents. What did you notice? What two things do they both have in common?
-4. Use the pointer and change the first two letters to 'E' and 'a'. What is this syntax called?
-5. Write a function that takes a string as input.
-6. The function should change the second letter of the string to 'c'.
-7. Call the function with "AAtions speak louder than words" as parameter. What happens and why?
-8. Resolve the issue from point 7.
+    *p_name = 'E';
+    *(p_name + 1) = 'a';
+    
+    char name2[] = ("AAtions speak louder than words");
 
-## Section II
-
-### Requirements
-
-1. Prompt the user to enter a word (maximum 100 characters).
-2. Read the input safely into a character array.
-3. Check if the word is a palindrome (case-sensitive).
-4. Print the result in the following format:
-
-Your provided word "WORD" is a palindrome.
-
-or
-
-Your provided word "WORD" is not a palindrome.
-
-5. You can use other libraries e.g. string operations.
-
-### Example
-
-Please enter your word (max. 100 characters): radar
-
-Your provided word "radar" is a palindrome.
-
-## Section III
-
-Adapt your program from section II so that it is case-insensitive.
+    return 0;
+ }
