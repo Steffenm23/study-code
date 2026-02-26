@@ -4,20 +4,20 @@
 int main (void) {
     int Number = 0;
     printf("Geben sie eine Zahl ein: ");
-    if (scanf("%d", Number) !=1) {
+    if (scanf("%d", Number) !=1) {       // Nummer wird eingelesen
         printf("Kein zulässiger Wert");
         free(Number);
         return 1;
     }
  int *pNumber = &Number;
 
-    int *pNumber = malloc(sizeof *pNumber);
+    int *pNumber = malloc(sizeof *pNumber);  // Speicherreservierung von der Größe der Nummer in Bytes
     if (pNumber == NULL) {
         printf("Speicherallokation fehlgeschlagen\n");
         return 1;
     }
 
- int *pNumber = calloc(Number, sizeof *pNumber);
+ int *pNumber = calloc(Number, sizeof *pNumber);  // 
     if (pNumber == NULL) {
         printf("Speicherallokation fehlgeschlagen\n");
         return 1;
